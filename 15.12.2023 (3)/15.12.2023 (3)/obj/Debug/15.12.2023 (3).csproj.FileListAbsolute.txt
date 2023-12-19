@@ -1,0 +1,10 @@
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\bin\Debug\15.12.2023 (3).exe.config
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\bin\Debug\15.12.2023 (3).exe
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\bin\Debug\15.12.2023 (3).pdb
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\obj\Debug\15.12.2023 (3).csproj.AssemblyReference.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\obj\Debug\_15._12._2023__3_.Form1.resources
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\obj\Debug\_15._12._2023__3_.Properties.Resources.resources
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\obj\Debug\15.12.2023 (3).csproj.GenerateResource.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\obj\Debug\15.12.2023 (3).csproj.CoreCompileInputs.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\obj\Debug\15.12.2023 (3).exe
+C:\Users\Xopero\Desktop\Nowy folder (2)\15.12.2023 (3)\15.12.2023 (3)\obj\Debug\15.12.2023 (3).pdb

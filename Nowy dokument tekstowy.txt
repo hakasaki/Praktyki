@@ -1,0 +1,34 @@
+
+// Ta pętla wykonwyana jest trzy razy - Nic - jest to komentarz dodany przez programiste w celu wyjasnienia kodu komus kto bedzie czytal
+
+
+/// <summary>			            - Specjalny rodzaj komentarza, którego używa IDE w celu wyjaśneinia działania kodu
+/// Wyświetl obrazek Rovera po
+/// naciśnieciu przyciusku
+/// </summary
+
+
+partial class Form1                         - Zmiana ikony maksymalizacji ( ) w pasku tytułowym Form1 na nieaktywny
+{
+
+   ...
+   this.MaximizeBox = false;
+   ...
+}
+
+
+myGrid.Background =                         - Zmienia kolor tła kontrolki Grid o nazwie myGrid
+   new SolidColorBrush(Colorsc.Violet);
+
+
+public sealed partial class MainPage : Page - Metoda wywoływana za każdym razem, gdy program wyświetla stronę główną
+{
+ private void InitializeComponent()
+ {
+  ...
+ }
+}
+
+
+helloLabel.Text = "Cześć";                  - Ustawia właściwości dla kontrolki TextBlock
+helloLabel.FontSize = 24;

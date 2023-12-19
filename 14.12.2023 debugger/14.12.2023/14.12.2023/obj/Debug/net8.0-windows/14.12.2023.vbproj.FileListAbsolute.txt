@@ -1,0 +1,6 @@
+C:\Users\Xopero\Desktop\Nowy folder (2)\14.12.2023 debugger\14.12.2023\14.12.2023\obj\Debug\net8.0-windows\_14._12._2023.Form1.resources
+C:\Users\Xopero\Desktop\Nowy folder (2)\14.12.2023 debugger\14.12.2023\14.12.2023\obj\Debug\net8.0-windows\14.12.2023.vbproj.GenerateResource.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\14.12.2023 debugger\14.12.2023\14.12.2023\obj\Debug\net8.0-windows\14.12.2023.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Xopero\Desktop\Nowy folder (2)\14.12.2023 debugger\14.12.2023\14.12.2023\obj\Debug\net8.0-windows\14.12.2023.AssemblyInfoInputs.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\14.12.2023 debugger\14.12.2023\14.12.2023\obj\Debug\net8.0-windows\14.12.2023.AssemblyInfo.vb
+C:\Users\Xopero\Desktop\Nowy folder (2)\14.12.2023 debugger\14.12.2023\14.12.2023\obj\Debug\net8.0-windows\14.12.2023.vbproj.CoreCompileInputs.cache

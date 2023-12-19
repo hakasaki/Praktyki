@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #score {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #timer {
+            font-size: 18px;
+        }
+
+        #game-board {
+            display: grid;
+            grid-template-columns: repeat(20, 20px);
+            position: relative;
+        }
+
+        .cell {
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+        }
+
+        .snake {
+            background-color: #333;
+        }
+
+        .food {
+            background-color: #f00;
+        }
+
+        #overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            text-align: center;
+            display: none;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="score">Score: 0</div>
+    <div id="timer">Time: 0 seconds</div>
+    <div id="game-board">
+        <div id="overlay"></div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const boardSize = 20;
+            const board = document.getElementById("game-board");
+            const scoreElement = document.getElementById("score");
+            const timerElement = document.getElementById("timer");
+            const overlay = document.getElementById("overlay");
+            let snake = [{ x: 10, y: 10 }];
+            let direction = "right";
+            let food = { x: 5, y: 5 };
+            let score = 0;
+            let isGamePaused = false;
+            let startTime;
+            let elapsedTime = 0;
+            let countdown;
+
+            function createBoard() {
+                for (let row = 0; row < boardSize; row++) {
+                    for (let col = 0; col < boardSize; col++) {
+                        const cell = document.createElement("div");
+                        cell.classList.add("cell");
+                        board.appendChild(cell);
+                    }
+                }
+            }
+
+            function drawSnake() {
+                const cells = document.querySelectorAll(".cell");
+                cells.forEach(cell => cell.classList.remove("snake"));
+
+                snake.forEach(segment => {
+                    const index = segment.x + segment.y * boardSize;
+                    if (index >= 0 && index < cells.length) {
+                        cells[index].classList.add("snake");
+                    }
+                });
+            }
+
+            function drawFood() {
+                const index = food.x + food.y * boardSize;
+                const cell = document.querySelectorAll(".cell")[index];
+                if (cell) {
+                    cell.classList.add("food");
+                }
+            }
+
+            function moveSnake() {
+                if (isGamePaused) return;
+
+                const head = { ...snake[0] };
+
+                switch (direction) {
+                    case "up":
+                        head.y--;
+                        break;
+                    case "down":
+                        head.y++;
+                        break;
+                    case "left":
+                        head.x--;
+                        break;
+                    case "right":
+                        head.x++;
+                        break;
+                }
+
+                snake.unshift(head);
+
+                // Check if snake eats food
+                if (head.x === food.x && head.y === food.y) {
+                    score++;
+                    scoreElement.textContent = "Score: " + score;
+                    removeFood();
+                    generateFood();
+                } else {
+                    snake.pop();
+                }
+
+                // Check if snake goes out of bounds
+                if (head.x < 0 || head.x >= boardSize || head.y < 0 || head.y >= boardSize) {
+                    alert("Game over! You hit the wall.");
+                    resetGame();
+                }
+            }
+
+            function generateFood() {
+                food = {
+                    x: Math.floor(Math.random() * boardSize),
+                    y: Math.floor(Math.random() * boardSize)
+                };
+
+                // Regenerate food if it overlaps with the snake
+                if (snake.some(segment => segment.x === food.x && segment.y === food.y)) {
+                    generateFood();
+                }
+            }
+
+            function removeFood() {
+                const index = food.x + food.y * boardSize;
+                const cell = document.querySelectorAll(".cell")[index];
+                if (cell) {
+                    cell.classList.remove("food");
+                }
+            }
+
+            function checkCollision() {
+                const head = snake[0];
+
+                // Check collision with itself
+                for (let i = 1; i < snake.length; i++) {
+                    if (head.x === snake[i].x && head.y === snake[i].y) {
+                        alert("Game over! You collided with yourself.");
+                        resetGame();
+                    }
+                }
+            }
+
+            function resetGame() {
+                snake = [{ x: 10, y: 10 }];
+                direction = "right";
+                score = 0;
+                scoreElement.textContent = "Score: 0";
+                generateFood();
+                startTime = null;
+                elapsedTime = 0;
+                isGamePaused = false;
+                updateTimer();
+                showOverlay("Game over!", 5);
+            }
+
+            function showOverlay(message, countdownTime = 0) {
+                overlay.textContent = message;
+                overlay.style.display = "block";
+
+                if (countdownTime > 0) {
+                    // Display countdown before resuming the game
+                    let count = countdownTime;
+                    countdown = setInterval(() => {
+                        overlay.textContent = "Gra wznowi się za " + count;
+                        count--;
+
+                        if (count < 0) {
+                            overlay.style.display = "none";
+                            clearInterval(countdown);
+                            startTime = Date.now() - elapsedTime * 1000; // Use elapsed time in seconds
+                        }
+                    }, 1000);
+                } else {
+                    // Hide overlay after 2 seconds
+                    setTimeout(() => {
+                        overlay.style.display = "none";
+                    }, 2000);
+                }
+            }
+
+            function updateGame() {
+                moveSnake();
+                checkCollision();
+                drawSnake();
+                drawFood();
+            }
+
+            function handleKeyPress(event) {
+                switch (event.key) {
+                    case "ArrowUp":
+                        direction = "up";
+                        break;
+                    case "ArrowDown":
+                        direction = "down";
+                        break;
+                    case "ArrowLeft":
+                        direction = "left";
+                        break;
+                    case "ArrowRight":
+                        direction = "right";
+                        break;
+                    case " ":
+                        togglePause();
+                        break;
+                    case "Escape":
+                        togglePause();
+                        break;
+                }
+            }
+
+            function togglePause() {
+                isGamePaused = !isGamePaused;
+                if (isGamePaused) {
+                    clearInterval(countdown);
+                } else {
+                    // Hide overlay after 2 seconds
+                    setTimeout(() => {
+                        overlay.style.display = "none";
+                        startGameCountdown();
+                    }, 2000);
+                }
+            }
+
+            function startGameCountdown() {
+                // Countdown before resuming the game
+                let count = 5;
+                overlay.textContent = "Gra wznowi się za " + count;
+                overlay.style.display = "block";
+
+                countdown = setInterval(() => {
+                    count--;
+
+                    if (count < 0) {
+                        overlay.style.display = "none";
+                        clearInterval(countdown);
+                        startTime = Date.now() - elapsedTime * 1000; // Use elapsed time in seconds
+                    } else {
+                        overlay.textContent = "Gra wznowi się za " + count;
+                    }
+                }, 1000);
+            }
+
+            function updateTimer() {
+                if (!startTime || isGamePaused) return;
+
+                const elapsedTime = Math.floor((Date.now() - startTime) / 1000);
+                timerElement.textContent = "Time: " + elapsedTime + " seconds";
+            }
+
+            createBoard();
+            generateFood();
+            setInterval(updateGame, 100);
+            setInterval(updateTimer, 1000);
+            document.addEventListener("keydown", handleKeyPress);
+        });
+    </script>
+</body>
+
+</html>
+
