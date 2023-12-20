@@ -1,0 +1,10 @@
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\bin\Debug\Logowanie 20.12.2023.exe.config
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\bin\Debug\Logowanie 20.12.2023.exe
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\bin\Debug\Logowanie 20.12.2023.pdb
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\obj\Debug\Logowanie 20.12.2023.csproj.AssemblyReference.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\obj\Debug\Logowanie_20._12._2023.Form1.resources
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\obj\Debug\Logowanie_20._12._2023.Properties.Resources.resources
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\obj\Debug\Logowanie 20.12.2023.csproj.GenerateResource.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\obj\Debug\Logowanie 20.12.2023.csproj.CoreCompileInputs.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\obj\Debug\Logowanie 20.12.2023.exe
+C:\Users\Xopero\Desktop\Nowy folder (2)\Logowanie 20.12.2023\Logowanie 20.12.2023\obj\Debug\Logowanie 20.12.2023.pdb

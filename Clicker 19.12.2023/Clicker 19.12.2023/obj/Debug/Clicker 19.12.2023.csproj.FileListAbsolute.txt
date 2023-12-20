@@ -1,0 +1,10 @@
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\bin\Debug\Clicker 19.12.2023.exe.config
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\bin\Debug\Clicker 19.12.2023.exe
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\bin\Debug\Clicker 19.12.2023.pdb
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\obj\Debug\Clicker 19.12.2023.csproj.AssemblyReference.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\obj\Debug\Clicker_19._12._2023.Form1.resources
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\obj\Debug\Clicker_19._12._2023.Properties.Resources.resources
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\obj\Debug\Clicker 19.12.2023.csproj.GenerateResource.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\obj\Debug\Clicker 19.12.2023.csproj.CoreCompileInputs.cache
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\obj\Debug\Clicker 19.12.2023.exe
+C:\Users\Xopero\Desktop\Nowy folder (2)\Clicker 19.12.2023\Clicker 19.12.2023\obj\Debug\Clicker 19.12.2023.pdb
